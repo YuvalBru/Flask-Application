@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>חיזוי מחיר רכב</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 200vh;
+            margin: 0;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label, input {
+            margin-bottom: 10px;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>חיזוי מחיר רכב</h1>
+        <form action="/predict" method="post">
+            <label for="year">:שנת ייצור</label>
+            <input type="number" id="year" name="year"><br>
+            <label for="gear">:גיר</label>
+            <input type="text" id="gear" name="gear"><br>
+            <label for="engine_type">:סוג מנוע</label>
+            <input type="text" id="engine_type" name="engine_type"><br>
+            <label for="prev_ownership">:בעלות קודמת</label>
+            <input type="text" id="prev_ownership" name="prev_ownership"><br>
+            <label for="curr_ownership">:בעלות נוכחית</label>
+            <input type="text" id="curr_ownership" name="curr_ownership"><br>
+            <label for="area">:אזור</label>
+            <input type="text" id="area" name="area"><br>
+            <label for="color">:צבע</label>
+            <input type="text" id="color" name="color"><br>
+            <label for="manufactor">:יצרן</label>
+            <input type="text" id="manufactor" name="manufactor"><br>
+            <label for="model">:דגם</label>
+            <input type="text" id="model" name="model"><br>
+            <label for="hand">:יד</label>
+            <input type="number" id="hand" name="hand"><br>
+            <label for="km">:קילומטראז'</label>
+            <input type="number" id="km" name="km"><br>
+            <label for="capacity_engine">:נפח מנוע</label>
+            <input type="number" id="capacity_engine" name="capacity_engine"><br>
+            <label for="cre_date">:תאריך יצירת מודעה</label>
+            <input type="date" id="cre_date" name="cre_date"><br>
+            <button type="submit">הערך מחיר</button>
+        </form>
+    </div>
+</body>
+</html>
